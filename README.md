@@ -1,1 +1,1 @@
-## omarchy styles
+## Omarchy styles
