@@ -1,0 +1,97 @@
+/* BLUE HACKER THEME - ULTRA-COMPACT */
+@define-color bg rgba(10, 10, 20, 0.95);
+@define-color text #89b4fa;
+@define-color accent #89b4fa;
+@define-color border rgba(137, 180, 250, 0.3);
+@define-color dim-text rgba(137, 180, 250, 0.4);
+
+* { 
+  all: unset; 
+  color: @text; 
+  font-family: "JetBrainsMono Nerd Font Mono", monospace; 
+  text-shadow: 0 0 5px rgba(137, 180, 250, 0.4);
+}
+
+scrollbar { opacity: 0; }
+
+.window {
+  background: transparent;
+}
+
+.box-wrapper {
+  background: @bg;
+  border-radius: 8px;
+  border: 2px solid @accent;
+  padding: 4px 8px;
+  box-shadow: 0 0 10px rgba(137, 180, 250, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.search-container {
+  background: transparent;
+  border-bottom: 1px solid @border;
+  margin-bottom: 4px;
+}
+
+.input {
+  padding: 4px 6px;
+  min-width: 80px;
+  font-size: 12px;
+  caret-color: @text;
+  font-weight: 700;
+}
+
+.input:before {
+  content: "󰍉 ";
+  color: @accent;
+}
+
+.item-box {
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: all 0.1s ease;
+}
+
+/* 
+   ICONS RESTORED IN THEME 
+   (They will be hidden by the global style.css if that's preferred)
+*/
+.icon, image, picture {
+  margin-right: 8px;
+  -gtk-icon-size: 16px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  display: block !important;
+}
+
+.subtext, .sub {
+  display: none !important;
+}
+
+child:hover .item-box {
+  background: rgba(137, 180, 250, 0.1);
+}
+
+child:selected .item-box {
+  background: rgba(137, 180, 250, 0.2);
+  border: 1px solid @border;
+  color: #ffffff;
+}
+
+child:selected .label {
+  color: #ffffff;
+  text-shadow: 0 0 5px @accent;
+}
+
+.elephant-hint, .placeholder {
+  font-size: 10px;
+  color: @dim-text;
+}
+
+.keybinds {
+  display: none !important;
+}
